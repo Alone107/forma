@@ -1,0 +1,208 @@
+.form-block {
+  padding: 24px;
+  border-radius: 8px;
+  margin-bottom: 12px;
+  border: 1px solid rgb(218, 220, 224);
+}
+
+.form-title {
+  line-height: 24px;
+  color: rgb(32, 33, 36);
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+
+.form-input-radio {
+  display: flex;
+  align-items: center;
+  gap: 0.75em;
+  min-height: 24px;
+  padding: 0.5em 0.5em 0.5em 0;
+}
+
+.form-input-radio input {
+  appearance: none;
+  width: 20px;
+  height: 20px;
+  border-radius: 100%;
+  border: 2px solid rgb(95, 99, 104);
+  margin: 0;
+  transition: all 0.5s;
+  position: relative;
+  cursor: pointer;
+}
+
+.form-input-radio input:checked {
+  border-color: rgb(103, 58, 183);
+}
+
+.form-input-radio input::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0);
+  width: 10px;
+  height: 10px;
+  border-radius: 100%;
+  background: rgb(103, 58, 183);
+  transition: all 0.5s;
+  opacity: 0;
+}
+
+.form-input-radio input:checked:after {
+  opacity: 1;
+  transform: translate(-50%, -50%) scale(1);
+}
+
+.form-input-checkbox input {
+  appearance: none;
+  width: 20px;
+  height: 20px;
+  border: 2px solid rgba(0, 0, 0, 0.54);
+  border-radius: 3px;
+  margin: 0;
+  position: relative;
+  cursor: pointer;
+}
+
+.form-input-checkbox {
+  display: flex;
+  align-items: center;
+  gap: 0.75em;
+  min-height: 24px;
+  padding: 0.5em 0.5em 0.5em 0;
+}
+
+.form-input-checkbox input:checked {
+  background: rgb(103, 58, 183);
+  border-color: rgb(103, 58, 183);
+}
+
+.form-input-checkbox input:checked::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  transition: all 0.5s;
+  background: url("../images/check.svg");
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 16px;
+  height: 16px;
+}
+
+.form-input-checkbox input::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0);
+  width: 35px;
+  height: 35px;
+  border-radius: 100%;
+  background: rgb(103, 58, 183, 0.2);
+  opacity: 0;
+  transition: all 0.5s;
+}
+
+.form-input-radio input::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0);
+  width: 35px;
+  height: 35px;
+  border-radius: 100%;
+  background: rgb(103, 58, 183, 0.2);
+  opacity: 0;
+  transition: all 0.5s;
+}
+
+.form-input-checkbox input:hover::before {
+  transform: translate(-50%, -50%) scale(1);
+  opacity: 1;
+}
+
+.form-input-checkbox input:focus::before {
+  transform: translate(-50%, -50%) scale(1);
+  opacity: 1;
+}
+
+.form-input-checkbox input:focus-visible::before {
+  transform: translate(-50%, -50%) scale(1);
+  opacity: 1;
+}
+
+.form-input-radio input:hover::before {
+  transform: translate(-50%, -50%) scale(1);
+  opacity: 1;
+}
+
+.form-input-radio input:focus::before {
+  transform: translate(-50%, -50%) scale(1);
+  opacity: 1;
+}
+
+.form-input-radio input:focus-visible::before {
+  transform: translate(-50%, -50%) scale(1);
+  opacity: 1;
+}
+
+.form-quest-row input {
+  width: 100%;
+  border: none;
+  background: transparent;
+  padding-bottom: 5px;
+  border-bottom: 2px solid rgb(103, 58, 183);
+  font-size: 14px;
+  font-weight: 400;
+  letter-spacing: 0.2px;
+  line-height: 20px;
+  color: rgb(32, 33, 36);
+}
+
+.form-quest-row input::placeholder {
+  font-size: 14px;
+  font-weight: 400;
+  letter-spacing: 0.2px;
+  line-height: 20px;
+  color: rgb(32, 33, 36, 0.8);
+}
+
+.form-img {
+  margin-top: 16px;
+  margin-bottom: 16px;
+}
+
+.form-quest-row input:focus {
+  outline: none;
+}
+
+.form-quest-row input:focus-visible {
+  outline: none;
+}
+
+.form-text-row textarea {
+  min-height: 80px;
+  width: 100%;
+  border-radius: 8px;
+  padding: 5px;
+  border: 1px solid rgb(218, 220, 224);
+}
+
+.form-text-row textarea:focus {
+  outline: none;
+  border-color: rgb(103, 58, 183);
+}
+
+.form-text-row textarea:focus-visible {
+  outline: none;
+  border-color: rgb(103, 58, 183);
+}
+
+.form-img img {
+  max-width: 100%;
+}
