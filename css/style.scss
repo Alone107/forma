@@ -156,12 +156,20 @@
   border: none;
   background: transparent;
   padding-bottom: 5px;
-  border-bottom: 2px solid rgb(103, 58, 183);
+  border-bottom: 2px solid rgb(218, 220, 224);
   font-size: 14px;
   font-weight: 400;
   letter-spacing: 0.2px;
   line-height: 20px;
   color: rgb(32, 33, 36);
+}
+
+.input-quest:focus {
+  border-color: rgb(103, 58, 183);
+}
+
+.input-quest:focus-visible {
+  border-color: rgb(103, 58, 183);
 }
 
 .input-quest::placeholder {
@@ -240,5 +248,46 @@
   height: auto;
   border-radius: 0;
   border: none;
-  border-bottom: 2px solid rgb(103, 58, 183);
+  border-bottom: 2px solid rgb(218, 220, 224);
+  margin-top: 5px;
+}
+
+.form-input-radio .input-quest:focus {
+  border-color: rgb(103, 58, 183);
+}
+
+.form-input-radio .input-quest:focus-visible {
+  border-color: rgb(103, 58, 183);
+}
+
+.form-input-radio input:checked + .label-more .input-quest {
+  border-color: rgb(103, 58, 183);
+}
+
+.label-more {
+  width: 100%;
+  display: flex;
+  gap: 5px;
+  align-items: center;
+}
+
+.form-input-checkbox .input-quest {
+  width: 100%;
+  height: auto;
+  border-radius: 0;
+  border: none;
+  border-bottom: 2px solid rgb(218, 220, 224);
+  margin-top: 5px;
+}
+
+.form-input-checkbox .input-quest:focus {
+  border-color: rgb(103, 58, 183);
+}
+
+.form-input-checkbox .input-quest:focus-visible {
+  border-color: rgb(103, 58, 183);
+}
+
+.form-input-checkbox input:checked + .label-more .input-quest {
+  border-color: rgb(103, 58, 183);
 }
