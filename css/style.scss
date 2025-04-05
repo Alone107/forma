@@ -1,3 +1,10 @@
+body {
+  line-height: 24px;
+  color: rgb(32, 33, 36);
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+
 .form-block {
   padding: 24px;
   border-radius: 8px;
@@ -9,7 +16,7 @@
   line-height: 24px;
   color: rgb(32, 33, 36);
   font-size: 16px;
-  margin-bottom: 10px;
+  margin-bottom: 20px;
 }
 
 .form-input-radio {
@@ -30,6 +37,7 @@
   transition: all 0.5s;
   position: relative;
   cursor: pointer;
+  flex-shrink: 0;
 }
 
 .form-input-radio input:checked {
@@ -55,58 +63,6 @@
   transform: translate(-50%, -50%) scale(1);
 }
 
-.form-input-checkbox input {
-  appearance: none;
-  width: 20px;
-  height: 20px;
-  border: 2px solid rgba(0, 0, 0, 0.54);
-  border-radius: 3px;
-  margin: 0;
-  position: relative;
-  cursor: pointer;
-}
-
-.form-input-checkbox {
-  display: flex;
-  align-items: center;
-  gap: 0.75em;
-  min-height: 24px;
-  padding: 0.5em 0.5em 0.5em 0;
-}
-
-.form-input-checkbox input:checked {
-  background: rgb(103, 58, 183);
-  border-color: rgb(103, 58, 183);
-}
-
-.form-input-checkbox input:checked::after {
-  content: "";
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  transition: all 0.5s;
-  background: url("../images/check.svg");
-  background-repeat: no-repeat;
-  background-size: contain;
-  width: 16px;
-  height: 16px;
-}
-
-.form-input-checkbox input::before {
-  content: "";
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%) scale(0);
-  width: 35px;
-  height: 35px;
-  border-radius: 100%;
-  background: rgb(103, 58, 183, 0.2);
-  opacity: 0;
-  transition: all 0.5s;
-}
-
 .form-input-radio input::before {
   content: "";
   position: absolute;
@@ -119,21 +75,6 @@
   background: rgb(103, 58, 183, 0.2);
   opacity: 0;
   transition: all 0.5s;
-}
-
-.form-input-checkbox input:hover::before {
-  transform: translate(-50%, -50%) scale(1);
-  opacity: 1;
-}
-
-.form-input-checkbox input:focus::before {
-  transform: translate(-50%, -50%) scale(1);
-  opacity: 1;
-}
-
-.form-input-checkbox input:focus-visible::before {
-  transform: translate(-50%, -50%) scale(1);
-  opacity: 1;
 }
 
 .form-input-radio input:hover::before {
@@ -180,11 +121,6 @@
   color: rgb(32, 33, 36, 0.8);
 }
 
-.form-img {
-  margin-top: 16px;
-  margin-bottom: 16px;
-}
-
 .input-quest:focus {
   outline: none;
 }
@@ -194,11 +130,15 @@
 }
 
 .form-text-row textarea {
-  min-height: 80px;
+  min-height: 160px;
   width: 100%;
   border-radius: 8px;
   padding: 5px;
   border: 1px solid rgb(218, 220, 224);
+}
+
+.form-text-row textarea::placeholder {
+  padding: 10px;
 }
 
 .form-text-row textarea:focus {
@@ -209,10 +149,6 @@
 .form-text-row textarea:focus-visible {
   outline: none;
   border-color: rgb(103, 58, 183);
-}
-
-.form-img img {
-  max-width: 100%;
 }
 
 .form-btn {
@@ -271,23 +207,111 @@
   align-items: center;
 }
 
-.form-input-checkbox .input-quest {
-  width: 100%;
-  height: auto;
-  border-radius: 0;
-  border: none;
-  border-bottom: 2px solid rgb(218, 220, 224);
-  margin-top: 5px;
+.name-title {
+  line-height: 24px;
+  color: rgb(32, 33, 36);
+  font-size: 16px;
+  border-right: 1px solid #000;
+  padding: 5px 10px;
 }
 
-.form-input-checkbox .input-quest:focus {
-  border-color: rgb(103, 58, 183);
+.name-text {
+  padding: 5px 10px;
 }
 
-.form-input-checkbox .input-quest:focus-visible {
-  border-color: rgb(103, 58, 183);
+.name-block {
+  display: flex;
+  border: 1px solid #000;
+  align-items: center;
+  margin-bottom: 20px;
 }
 
-.form-input-checkbox input:checked + .label-more .input-quest {
-  border-color: rgb(103, 58, 183);
+.item-row {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.item-name {
+  font-weight: 600;
+}
+
+.class-number {
+  font-weight: 600;
+}
+
+.title {
+  text-align: center;
+  font-weight: 600;
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.form-title span {
+  font-weight: 600;
+}
+
+.text-box {
+  margin-bottom: 20px;
+}
+
+.question-block-question {
+  margin-bottom: 10px;
+}
+
+.number-ball {
+  text-align: right;
+}
+
+.text-desc {
+  font-style: italic;
+  margin-bottom: 20px;
+}
+
+.textarea-question {
+  min-height: 60px !important;
+}
+
+.text-desc span {
+  font-weight: 600;
+}
+
+.form-block.succes {
+  border-color: green;
+}
+
+.form-block.error {
+  border-color: red;
+}
+
+textarea.succes {
+  border-color: green;
+}
+
+textarea.error {
+  border-color: red;
+}
+
+.date {
+  text-align: right;
+  margin-bottom: 20px;
+}
+
+@media (max-width: 600px) {
+  .question-list ul {
+    margin-left: 10px;
+    padding-left: 10px;
+  }
+
+  .form-btn {
+    max-width: none;
+  }
+
+  .item-name {
+    font-size: 14px;
+  }
+
+  .class-number {
+    font-size: 14px;
+  }
 }
